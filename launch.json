@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "BriefsToken",
+    "name": "Briefs",
+    "symbol": "BRIEFS",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 5000,
+    "initialMarketCapWei": "8888000000000000000000",
+    "remainderTo": "0xee2aaa315cf7ed169f93148d30d24af9318dbb66"
+  },
+  "notes": "Briefs (BRIEFS): Small entry. Big $IMD pots. An AI jury. Finish on top and take all. The court is cooked. briefs.fun, x.com/Briefs_fun. BriefsToken in src/BriefsToken.sol is a plain fixed-supply ERC-20 inheriting the vendored OpenZeppelin Contracts v5.0.2 ERC20 with 18 decimals. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 BRIEFS (1000000000000000000000000000 minor units) once to msg.sender, the launch factory, emitting a single Transfer from the zero address. There is no transfer tax, burn, reflection, rebase, wallet limit, trading switch, blacklist, pause, owner, mint role, external burn entry point, upgrade path or external call in the constructor, so every launch flow (factory to MerkleDistributor, distributor claims, the single-sided pool seed through the Uniswap v4 PoolManager, and swaps either way) moves exactly the amount requested and the supply can never grow after deployment. The token exempts nothing because nothing needs exempting. There are no application contracts: the jury, pots and contest in the brief are branding with no on-chain rules supplied, and are operated off-chain by the project. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7 on Ethereum at the launch policy's 1.25% fee with tick spacing 60; pool.initialPrice is provenance only and the deployer derives the opening price from economics.initialMarketCapWei (8,888 IMD for the whole supply) and totalSupply. Economics are the requester's verbatim: 5000 bps of the supply seeds the pool and the rest of the requester's share goes to 0xee2aaa315cf7ed169f93148d30d24af9318dbb66; the swarm's 10% is taken by the factory and is not written here."
+}
