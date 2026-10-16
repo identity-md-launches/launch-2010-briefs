@@ -1,0 +1,19 @@
+[profile.default]
+src = "src"
+test = "test"
+out = "out"
+libs = ["lib"]
+solc = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+bytecode_hash = "none"
+remappings = ["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"]
+
+[profile.default.fuzz]
+runs = 1024
+seed = "0x8448fc74c31c4ec6ed4817c0888972c734737f19e58e173001f4524393810b29"
+
+[fmt]
+line_length = 110
+ignore = ["lib/**"]
